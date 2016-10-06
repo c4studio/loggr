@@ -1,6 +1,6 @@
 {
     "name": "c4studio/loggr",
-    "description": "Provides facade and helper for storing and retrieving database stored system log messages.",
+    "description": "Provides an interface for storing and retrieving database stored system log messages.",
     "authors": [
         {
             "name": "Peter Illés",
