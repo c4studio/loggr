@@ -1,0 +1,21 @@
+{
+    "name": "c4studio/loggr",
+    "description": "Provides facade and helper for storing and retrieving database stored system log messages.",
+    "authors": [
+        {
+            "name": "Peter Illés",
+            "email": "peter.illes@c4studio.ro"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "laravel/framework": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "C4studio\\Loggr\\": "src/C4studio/Loggr"
+        }
+    },
+    "minimum-stability": "dev"
+}
