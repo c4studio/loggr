@@ -44,56 +44,56 @@ Loggr uses a database table for storage, so you'll need to run the migrations
 ### Add log message using facade
 
 ```php
-Loggr::add('Message')
+Loggr::add('Message');
 ```
 
 You can specify the owner using the second parameter which accepts either a User model or a user ID
 
 ```php
-Loggr::add('Message', Auth::user())
+Loggr::add('Message', Auth::user());
 ```
 
 ### Add log message using helper function
 
 ```php
-loggr('Message')
+loggr('Message');
 ```
 
 As in the case of the facade, you can specify the owner using the second parameter
 
 ```php
-loggr('Message', Auth::user())
+loggr('Message', Auth::user());
 ```
 
-### Retrieving log message
+### Retrieving log messages
 
-To get all log message use
+To get all log messages use
 
 ```php
-Loggr::get()
+Loggr::get();
 ```
 
 You can also easily get log messages belonging to a user
 
 ```php
-Loggr::owner(Auth::user())
+Loggr::owner(Auth::user());
 ```
 
 or between two dates
 
 ```php
-Loggr::interval(\Carbon\Carbon::yesterday(), \Carbon\Carbon::today())
+Loggr::interval(\Carbon\Carbon::yesterday(), \Carbon\Carbon::today());
 ```
 
 If you want to only set starting or end date, just leave off parameter or pass in null
 
 ```php
-Loggr::interval(\Carbon\Carbon::yesterday())
-Loggr::interval(null, \Carbon\Carbon::yesterday())
+Loggr::interval(\Carbon\Carbon::yesterday());
+Loggr::interval(null, \Carbon\Carbon::yesterday());
 ```
 
 For more complex queries, you can return a Builder object by using query(). Easy, right?
 
 ```php
-Loggr::query()->orderBy('timestamp', 'desc')->take(2)->get()
+Loggr::query()->orderBy('timestamp', 'desc')->take(2)->get();
 ```
