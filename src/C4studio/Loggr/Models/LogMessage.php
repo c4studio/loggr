@@ -38,7 +38,9 @@ class LogMessage extends Model {
 
 
     /**
-     * Get owner of log message.
+     * Get owner of log message
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function owner()
     {
