@@ -53,6 +53,12 @@ You can specify the owner using the second parameter which accepts either a User
 Loggr::add('Message', Auth::user());
 ```
 
+You can also add any additional data as a 3rd parameter, which will be stored in a binary type column
+
+```php
+Loggr::add('Message', Auth::user(), serialize($myArray));
+```
+
 ### Add log message using helper function
 
 ```php

@@ -9,9 +9,9 @@ if (!function_exists('loggr')) {
      * @param \App\Models\User|int $owner
      * @return LogMessage|bool
      */
-    function loggr($message, $owner = null)
+    function loggr($message, $owner = null, $data = null)
     {
-        return \C4studio\Loggr\Facades\Loggr::add($message, $owner);
+        return \C4studio\Loggr\Facades\Loggr::add($message, $owner, $data);
     }
 
 }

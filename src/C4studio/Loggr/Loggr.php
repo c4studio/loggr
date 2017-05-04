@@ -27,7 +27,7 @@ class Loggr {
      * @param \App\Models\User|int $owner
      * @return LogMessage|bool
      */
-    public static function add($message, $owner = null)
+    public static function add($message, $owner = null, $data = null)
     {
         if (!is_null($owner)) {
             if (is_a($owner, self::$user_model))
@@ -41,7 +41,8 @@ class Loggr {
 
          return LogMessage::create([
             'message' => $message,
-            'owner_id' => $owner_id
+            'owner_id' => $owner_id,
+            'data' => $data
          ]);
     }
 

@@ -19,7 +19,7 @@ class LogMessage extends Model {
      *
      * @var array
      */
-    protected $fillable = ['owner_id', 'message'];
+    protected $fillable = ['owner_id', 'message', 'data'];
 
     /**
      * The table associated with the model.
