@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Config;
 
 class LogMessage extends Model {
 
+    const CREATED_AT = 'timestamp';
+    const UPDATED_AT = null;
+
     /**
      * The attributes that should be mutated to dates.
      *
@@ -27,6 +30,7 @@ class LogMessage extends Model {
      * @var string
      */
     protected $table = 'logs';
+
 
 
 
